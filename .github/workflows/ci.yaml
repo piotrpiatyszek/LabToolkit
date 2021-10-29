@@ -36,7 +36,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu-ssh:${{ steps.branch.outputs.branch }}-${{ steps.date.outputs.date }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/lab-toolkit:${{ steps.branch.outputs.branch }}-${{ steps.date.outputs.date }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
       - name: Image digest
